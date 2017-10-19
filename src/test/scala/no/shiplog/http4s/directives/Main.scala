@@ -19,7 +19,7 @@ object Main extends StreamApp[IO] {
     import ops._
     import org.http4s.implicits._
 
-    val Mapping = Async().PathMapping
+    val Mapping = Plan[IO]().PathMapping
 
     val lm = LocalDateTime.now()
 
